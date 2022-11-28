@@ -1,7 +1,7 @@
 
-from Quote import getQuote
-from ImageCreate import createImage
-from SoundCreate import makeAudio
+from utils.Quote import getQuote
+from utils.ImageCreate import createImage
+from utils.SoundCreate import makeAudio
 
 # Save the message to a variable
 text_quote = getQuote()
