@@ -5,8 +5,7 @@
 
 1. Download free video
 2. Download free music track
-3. Format JSON response
-4. Put it all together using moviepy
+3. Put it all together using moviepy
 
 ### Completed:
 
