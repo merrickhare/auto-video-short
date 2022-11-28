@@ -1,8 +1,11 @@
 import requests
-
+import json
 
 
 def getQuote():
     response = requests.request("GET", "https://catfact.ninja/fact")
     formatted = response.text
-    return formatted
+    parse_json = json.loads(formatted)
+    return parse_json['fact']
+
+
