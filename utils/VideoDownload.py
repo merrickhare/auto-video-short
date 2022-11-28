@@ -1,8 +1,5 @@
 import requests
 import json
-import urllib
-
-
 
 
 videoUrl = "https://api.pexels.com/videos/popular?per_page=1"
@@ -11,7 +8,6 @@ response = requests.request('GET',videoUrl,headers=header_info)
 format_response = response.text
 parse_json = json.loads(format_response)
 videoLink = parse_json['videos'][0]['video_files'][0]['link']
-# urllib.request.urlretrieve(videoLink, 'saved_video.mp4') 
 print(videoLink)
 
 
