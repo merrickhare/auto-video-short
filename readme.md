@@ -1,4 +1,4 @@
-# Youtube Shorts Video Maker Bot
+# Youtube Shorts Video Maker
 <em>This is a personal project not intended for use by the community until completed. </em>
 
 ### To Do List:
