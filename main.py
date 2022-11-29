@@ -3,6 +3,7 @@ from utils.Quote import getQuote
 from utils.ImageCreate import createImage
 from utils.SoundCreate import makeAudio
 
+
 # Save the message to a variable
 text_quote = getQuote()
 

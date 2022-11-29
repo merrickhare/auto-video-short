@@ -1,14 +1,10 @@
 import requests
 import json
+from constants import VIDEOURL, AUTH_TOKEN
 
-# API URL
-videoUrl = "https://api.pexels.com/videos/popular?per_page=1"
-
-# Auth Token
-header_info = {'Authorization': '563492ad6f917000010000012b61ae83212946ee99976a1e5b0e48c7'}
 
 # Request stored in response variable
-response = requests.request('GET',videoUrl,headers=header_info)
+response = requests.request('GET',VIDEOURL,headers=AUTH_TOKEN)
 
 # Format the response 
 format_response = response.text
