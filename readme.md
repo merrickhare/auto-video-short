@@ -1,6 +1,11 @@
 # Auto Shorts Video Maker 
 <em>This is a personal project not intended for use by the community until completed. </em>
 
+### Install and Use:
+
+#### Required (macOS):
+
+
 ### To Do List:
 1. Get the duration of each video and set it to create the video length
 2. Figure out better way to store and add text to video
