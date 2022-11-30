@@ -1,8 +1,8 @@
 
-from utils.Quote import getQuote
-from utils.ImageCreate import createImage
-from utils.SoundCreate import makeAudio
-from utils.VideoDownload import downloadVideo
+from videoProcess.Quote import getQuote
+from videoProcess.ImageCreate import createImage
+from videoProcess.SoundCreate import makeAudio
+from videoProcess.VideoDownload import downloadVideo
 from moviepy.editor import *
 
 
