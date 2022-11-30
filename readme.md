@@ -7,9 +7,9 @@
 
 
 ### To Do List:
-1. Get the duration of each video and set it to create the video length
-2. Figure out better way to store and add text to video
-3. Format the text so that it is centered with an opaque background
+1. Get the duration of the audio and set it as the duration of the video
+2. Format text from single line to multi line and resize 
+3. Loop the background video for the duration of the audio. 
 
 ### Completed:
 
