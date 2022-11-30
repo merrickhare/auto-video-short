@@ -28,7 +28,9 @@ downloadVideo()
 
 # get the output video
 
-video_clip = VideoFileClip('output/downloaded.mp4',audio=False)
+video_clip = VideoFileClip('output/downloaded.mp4', audio=False)
+audio_clip = AudioFileClip('output/audiofile.mp3')
+video_clip = video_clip.set_audio(audio_clip)
 fact_text = TextClip("Test Quote String", color='black', fontsize=20)
 final = CompositeVideoClip([video_clip,fact_text])
 final.subclip(0,15).write_videofile("output/newfile.mp4", fps=24, codec='libx264')
