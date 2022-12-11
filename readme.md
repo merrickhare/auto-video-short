@@ -1,28 +1,24 @@
-# Auto Shorts Video Maker 
-<em>This is a personal project not intended for use by the community until completed. </em>
+# Video Shorts Cat Fact Bot 
+<em>This is a personal project to begin learning Python.</em>
 
-### Install and Use:
+## Install and Use:
+<em>pip install moviepy</em>\
+<em>pip install gTTS</em>\
+<em>pip install dotenv</em>
 
-#### Required (macOS):
+
+### Required (macOS) and Accounts:
+<em>https://www.pexels.com</em>\
+<em>brew install ffmpeg</em>\
+<em>brew install imagemagick</em>
 
 
-### To Do List:
-1. Get the duration of the audio and set it as the duration of the video
-2. Format text from single line to multi line and resize 
-3. Loop the background video for the duration of the audio. 
+## To Do List:
 
-### Completed:
+1. Automate upload to youtube
 
-1. Connected to the cat "facts" API
-2. Create audio file from the cat facts
-3. Grabbing a single quote from API
-4. Storing created assests in output folder
-5. Download video in portrait mode from Pexels
-6. mp4 generated with assets
 
-### Notes: 
-
-ImageCreate.py - Uses Pillow library to take the quote from Quote.py and overlay it onto the template image.
+## Notes: 
 
 Quote.py - Uses requests library to grab a cat "fact" from a free api and formats the json response.
 
@@ -32,18 +28,7 @@ main.py - This will call all of the functions to do the following:
 
 VideoDownload.py - Downloads the video to be used as the background
 
-<em>pip install moviepy</em>\
-<em>brew install ffmpeg</em>\
-<em>brew install imagemagick</em>
-
-
-1. Generate the quote
-2. Create the image
-3. Create the sound file
-4. Edit the generated files into a single mp4
-5. Save all output files to output folder
-
-### Resources:
+## Resources:
 
 Video API \
 <em>https://www.pexels.com/api/documentation/</em> 
