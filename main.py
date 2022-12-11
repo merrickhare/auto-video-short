@@ -7,6 +7,7 @@ from textwrap import fill
 from UploadStorage.s3upload import uploadVideo
 from os import environ
 from dotenv import load_dotenv
+import datetime
 
 # Created By: Merrick Hare
 # Date: 11/27/2022
@@ -18,6 +19,8 @@ load_dotenv(".env")
 AUDIO_NAME = environ["AUDIO_NAME"]
 VIDEO_NAME = environ["VIDEO_NAME"]
 FINAL_VIDEO = environ["FINAL_VIDEO"]
+videoDay = datetime.datetime.now()
+videoDay.strftime("%m-%d-%M")
 
 try:
     # Save the message to a variable
@@ -46,7 +49,7 @@ try:
 
     # Upload the video to AWS S3 Bucket
 
-    uploadVideo(FINAL_VIDEO)
+    uploadVideo(f"{FINAL_VIDEO}")
 
 except Exception as e:
 

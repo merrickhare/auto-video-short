@@ -1,6 +1,7 @@
 import requests
 import json
 import urllib.request
+import ast
 from random import randint
 from os import environ
 from dotenv import load_dotenv
@@ -10,19 +11,18 @@ load_dotenv(".env")
 
 
 VIDEOURL = environ["VIDEOURL"]
-AUTH_TOKEN = environ["AUTH_TOKEN"]
+AUTH_TOKEN = ast.literal_eval(environ["AUTH_TOKEN"])
 VIDEO_NAME = environ["VIDEO_NAME"]
 
 def downloadVideo():
     # Create random number between 0 and 49
     random_index = randint(0,49)
-
     # Request stored in response variable
     response = requests.request('GET',VIDEOURL,headers=AUTH_TOKEN)
 
     # Format the response 
     format_response = response.text
-
+    
     # Parse json 
     parse_json = json.loads(format_response)
 
@@ -31,7 +31,6 @@ def downloadVideo():
 
     # Download the video file
     urllib.request.urlretrieve(videoLink, f"output/{VIDEO_NAME}")
-
 
 
 
