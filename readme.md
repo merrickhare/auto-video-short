@@ -1,7 +1,7 @@
 # Video Shorts Cat Fact Bot 
 <em>This is a personal project to continue learning Python.</em>
 
-### Required (macOS) and Accounts:
+### Required:
 <em>https://www.pexels.com API Authorization Token</em>\
 <em>brew install ffmpeg</em>\
 <em>brew install imagemagick</em>\
@@ -14,8 +14,7 @@
 
 ## To Do List:
 
-1. Automate upload to youtube
-
+1. Automate upload to youtube channel
 
 ## Notes: 
 
