@@ -19,6 +19,7 @@ load_dotenv(".env")
 AUDIO_NAME = environ["AUDIO_NAME"]
 VIDEO_NAME = environ["VIDEO_NAME"]
 FINAL_VIDEO = environ["FINAL_VIDEO"]
+UPLOAD = environ["UPLOAD"]
 videoDay = datetime.datetime.now()
 videoDay.strftime("%m-%d-%M")
 
@@ -46,10 +47,11 @@ try:
     final = CompositeVideoClip([video_clip,fact_text],size=resolution)
 
     final.subclip(0, video_clip.duration).write_videofile(f"output/{FINAL_VIDEO}", fps=30, codec='libx264')
-
+    
     # Upload the video to AWS S3 Bucket
 
-    uploadVideo(f"{FINAL_VIDEO}")
+    if UPLOAD == True: 
+        uploadVideo(f"{FINAL_VIDEO}")
 
 except Exception as e:
 
