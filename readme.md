@@ -9,6 +9,8 @@
 <em>pip install gTTS</em>\
 <em>pip install dotenv</em>
 
+### Edit config.env and Save file As .env 
+
 
 ## To Do List:
 
