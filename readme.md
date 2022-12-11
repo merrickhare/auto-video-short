@@ -1,5 +1,5 @@
 # Video Shorts Cat Fact Bot 
-<em>This is a personal project to begin learning Python.</em>
+<em>This is a personal project to continue learning Python.</em>
 
 ### Required (macOS) and Accounts:
 <em>https://www.pexels.com API Authorization Token</em>\
