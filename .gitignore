@@ -1,3 +1,6 @@
 /notes.txt
 /videoProcess/__pycache__
 /output
+/.env
+/UploadStorage/__pycache__
+__pycache__

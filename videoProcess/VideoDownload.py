@@ -2,9 +2,16 @@ import requests
 import json
 import urllib.request
 from random import randint
+from os import environ
+from dotenv import load_dotenv
 
-VIDEOURL = "https://api.pexels.com/videos/search?query=cats&orientation=portrait&per_page=49"
-AUTH_TOKEN = {'Authorization': '563492ad6f917000010000012b61ae83212946ee99976a1e5b0e48c7'}
+#load environment constants
+load_dotenv(".env")
+
+
+VIDEOURL = environ["VIDEOURL"]
+AUTH_TOKEN = environ["AUTH_TOKEN"]
+VIDEO_NAME = environ["VIDEO_NAME"]
 
 def downloadVideo():
     # Create random number between 0 and 49
@@ -23,7 +30,7 @@ def downloadVideo():
     videoLink = parse_json['videos'][random_index]['video_files'][0]['link']
 
     # Download the video file
-    urllib.request.urlretrieve(videoLink, "output/downloaded.mp4")
+    urllib.request.urlretrieve(videoLink, f"output/{VIDEO_NAME}")
 
 
 
