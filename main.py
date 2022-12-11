@@ -48,10 +48,9 @@ try:
 
     final.subclip(0, video_clip.duration).write_videofile(f"output/{FINAL_VIDEO}", fps=30, codec='libx264')
     
-    # Upload the video to AWS S3 Bucket
-
-    if UPLOAD == True: 
-        uploadVideo(f"{FINAL_VIDEO}")
+    # Upload the video to AWS S3 Bucket 
+    # if UPLOAD == True: 
+    #    uploadVideo(f"{FINAL_VIDEO}")
 
 except Exception as e:
 

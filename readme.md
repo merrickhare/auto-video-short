@@ -9,7 +9,8 @@
 <em>pip install gTTS</em>\
 <em>pip install dotenv</em>
 
-### Edit config.env and Save file As .env 
+### Edit config.env and Save file As .env.
+### Unless using s3 for storage do not uncomment in main.py. 
 
 
 ## To Do List:
