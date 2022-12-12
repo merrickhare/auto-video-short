@@ -20,8 +20,7 @@ AUDIO_NAME = environ["AUDIO_NAME"]
 VIDEO_NAME = environ["VIDEO_NAME"]
 FINAL_VIDEO = environ["FINAL_VIDEO"]
 UPLOAD = environ["UPLOAD"]
-videoDay = datetime.datetime.now()
-videoDay.strftime("%m-%d-%M")
+
 
 try:
     # Save the message to a variable
@@ -49,8 +48,8 @@ try:
     final.subclip(0, video_clip.duration).write_videofile(f"output/{FINAL_VIDEO}", fps=30, codec='libx264')
     
     # Upload the video to AWS S3 Bucket 
-    # if UPLOAD == True: 
-    #    uploadVideo(f"{FINAL_VIDEO}")
+
+    uploadVideo(f"{FINAL_VIDEO}")
 
 except Exception as e:
 
