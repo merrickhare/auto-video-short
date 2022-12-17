@@ -1,6 +1,6 @@
 
 from videoProcess.Quote import getQuote
-from videoProcess.SoundCreate import makeAudio
+from videoProcess.SoundCreate import pollyAudio
 from videoProcess.VideoDownload import downloadVideo
 from moviepy.editor import VideoFileClip, AudioFileClip, TextClip, CompositeVideoClip
 from textwrap import fill
@@ -27,7 +27,7 @@ try:
     text_quote = getQuote()
 
     # Create the audio file from the quote
-    makeAudio(text_quote)
+    pollyAudio(text_quote)
 
     # Grab video from API and download to output folder
     downloadVideo()
@@ -49,9 +49,9 @@ try:
     
     # Upload the video to AWS S3 Bucket 
 
-    uploadVideo(f"{FINAL_VIDEO}")
+    # uploadVideo(f"{FINAL_VIDEO}")
 
 except Exception as e:
 
-    print(f"Exception:  {e}")
+    print(f"OOPS Something went wrong!:  {e}")
 
