@@ -7,6 +7,7 @@ from textwrap import fill
 from UploadStorage.s3upload import uploadVideo
 from os import environ
 from dotenv import load_dotenv
+from pyfiglet import Figlet
 
 
 # Created By: Merrick Hare
@@ -22,6 +23,13 @@ FINAL_VIDEO = environ["FINAL_VIDEO"]
 UPLOAD = environ["UPLOAD"]
 
 
+fig_font = Figlet(
+    font="slant",
+    justify="left"
+)
+print(fig_font.renderText("Auto Video Short!!!"))
+
+input("Press ENTER/RETURN to start the program....")
 try:
     # Save the message to a variable
     text_quote = getQuote()
