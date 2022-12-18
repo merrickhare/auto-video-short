@@ -7,7 +7,7 @@ from textwrap import fill
 from UploadStorage.s3upload import uploadVideo
 from os import environ
 from dotenv import load_dotenv
-import datetime
+
 
 # Created By: Merrick Hare
 # Date: 11/27/2022
