@@ -1,6 +1,9 @@
 # Video Shorts Cat Fact Bot 
 <em>This is a personal project to continue learning Python.</em>
 
+Example Video:
+https://youtube.com/shorts/yAZ6RszQTy4?feature=share
+
 ### Required:
 <em>https://www.pexels.com API Authorization Token</em>\
 <em>brew install ffmpeg</em>\
