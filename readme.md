@@ -1,13 +1,13 @@
 # Video Shorts Cat Fact Bot 
 <em>This is a personal project to continue learning Python.</em>
 
+### Example Video:
+https://youtube.com/shorts/yAZ6RszQTy4?feature=share
+
 # Updates
 Created a function in SoundCreate.py to use AWS Polly for voice. It grabs a random voice from the US English list each time for the voice over. **Must have AWS account** to use. 
 
 The gTTS function is available to use and can be swapped out in main.py if needed. 
-
-# Example Video:
-https://youtube.com/shorts/yAZ6RszQTy4?feature=share
 
 # Required:
 <em>https://www.pexels.com API Authorization Token</em>\
@@ -30,7 +30,7 @@ https://youtube.com/shorts/yAZ6RszQTy4?feature=share
 
 Quote.py - Uses requests library to grab a cat "fact" from a free api and formats the json response.
 
-SoundCreate.py - Uses gTTS library to take the quote from Quote.py and turn it into an audio file.
+SoundCreate.py - Uses gTTS library to take the quote from Quote.py and turn it into an audio file. Includes function for AWS Polly and will grab random voice for each video. 
 
 main.py - This will call all of the functions.
 
@@ -44,6 +44,8 @@ Video API \
 gTTS \
 <em>https://gtts.readthedocs.io/en/latest/</em>
 
+AWS Polly \
+<em>https://docs.aws.amazon.com/polly/latest/dg/what-is.html</em>
 
 
 
