@@ -1,8 +1,8 @@
 # Video Shorts Cat Fact Bot 
 <em>This is a personal project to continue learning Python.</em>
 
-### Example Video:
-https://youtube.com/shorts/yAZ6RszQTy4?feature=share
+### YouTube Channel:
+https://www.youtube.com/channel/UCOLn1O_aNc2gmbecBSmsSIw
 
 # Updates
 Created a function in SoundCreate.py to use AWS Polly for voice. It grabs a random voice from the US English list each time for the voice over. **Must have AWS account** to use. 
