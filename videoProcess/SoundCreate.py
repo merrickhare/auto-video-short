@@ -14,13 +14,13 @@ client = boto3.Session(profile_name=PROFILE).client("polly")
 
 # function that takes the text quote and outputs a speech file
 
-def makeAudio(quote):
+def make_audio(quote):
     message = quote
     speech = gTTS(message)
     speech.save(f"output/{AUDIO}")
 
 # Function to use AWS polly instead of gTTS
-def pollyAudio(quote):
+def polly_audio(quote):
     voices = ["Kimberly","Kendra","Joanna","Ivy","Kevin","Matthew","Justin","Joey"]
     randName = randint(0,7)
     response = client.synthesize_speech(

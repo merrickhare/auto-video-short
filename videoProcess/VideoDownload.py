@@ -14,7 +14,7 @@ VIDEOURL = environ["VIDEOURL"]
 AUTH_TOKEN = ast.literal_eval(environ["AUTH_TOKEN"])
 VIDEO_NAME = environ["VIDEO_NAME"]
 
-def downloadVideo():
+def download_video():
     # Create random number between 0 and 49
     random_index = randint(0,49)
     # Request stored in response variable

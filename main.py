@@ -1,10 +1,10 @@
 
-from videoProcess.Quote import getQuote
-from videoProcess.SoundCreate import pollyAudio
-from videoProcess.VideoDownload import downloadVideo
+from videoProcess.Quote import get_quote
+from videoProcess.SoundCreate import polly_audio, make_audio
+from videoProcess.VideoDownload import download_video
 from moviepy.editor import VideoFileClip, AudioFileClip, TextClip, CompositeVideoClip
 from textwrap import fill
-from UploadStorage.s3upload import uploadVideo
+from UploadStorage.s3upload import upload_video
 from os import environ
 from dotenv import load_dotenv
 from pyfiglet import Figlet
@@ -32,13 +32,17 @@ print(fig_font.renderText("Auto Video Short!!!"))
 input("Press ENTER/RETURN to start the program....")
 try:
     # Save the message to a variable
-    text_quote = getQuote()
+    text_quote = get_quote()
 
     # Create the audio file from the quote
-    pollyAudio(text_quote)
+    # Uncomment polly_audio function and comment out the make_audio function
+    # if you have set up an aws account and configured your local profile
+    # polly_audio(text_quote)
+
+    make_audio(text_quote)
 
     # Grab video from API and download to output folder
-    downloadVideo()
+    download_video()
 
     # Assemble the final video 
     text_quote = fill(text_quote,width=30,fix_sentence_endings=True)
@@ -57,7 +61,7 @@ try:
     
     # Upload the video to AWS S3 Bucket 
 
-    # uploadVideo(f"{FINAL_VIDEO}")
+    # upload_video(f"{FINAL_VIDEO}")
 
 except Exception as e:
 

@@ -11,7 +11,7 @@ load_dotenv(".env")
 # Format the response
 # Parse json  and return the single fact
 
-def getQuote():
+def get_quote():
     fact_key = os.environ["FACT_KEY"]
     response = requests.request("GET", os.environ["FACT_URL"])
     formatted = response.text

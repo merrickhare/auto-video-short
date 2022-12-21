@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv(".env")
 
 # function to start a new session and upload to 
-def uploadVideo(videoName):
+def upload_video(videoName):
     try:
         session = boto3.Session(profile_name=os.environ["PROFILE"])
         s3 = session.client('s3')
